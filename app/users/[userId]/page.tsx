@@ -3,7 +3,7 @@ import getUser from '@/lib/getUser'
 import getUserPosts from '@/lib/getUserPosts'
 import { Suspense } from 'react'
 import UserPosts from './components /UserPosts'
-import type { Metadata } from 'next'
+
 
 type Params = {
     params: {
@@ -11,7 +11,6 @@ type Params = {
     }
 }
 
-export async function generateMetadata({ params: { userId }}: Params): Promise<Metadata>
 
 export default async function UserPage({ params: { userId }}: Params) {
 
