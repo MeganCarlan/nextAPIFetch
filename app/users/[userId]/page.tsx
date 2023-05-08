@@ -12,7 +12,7 @@ type Params = {
 }
 
 
-export default async function UserPage({ params: { userId }}: Params) {
+export default async function UserPage({ params: { userId }}: Params): Promise<JSX.Element> {
 
   const userData: Promise<User> = getUser(userId)
   const userPostsData: Promise<Post[]> = getUserPosts(userId)
